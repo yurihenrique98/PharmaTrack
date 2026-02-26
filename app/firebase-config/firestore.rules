@@ -1,0 +1,66 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+        && (
+          get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true
+          || get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == "true"
+        );
+    }
+    // USERS
+    match /users/{uid} {
+      // Keep read allowed, but safer: user can read self, admin can read all users
+      allow read: if signedIn() && (request.auth.uid == uid || isAdmin());
+
+      // Create allowed when signed in (your app likely creates profile doc)
+      allow create: if signedIn();
+
+      // IMPORTANT FIX:
+      // Admin must be able to update other users (Save Name in Admin Dashboard)
+      allow update: if signedIn() && (request.auth.uid == uid || isAdmin());
+
+      // Optional but useful: allow admin to delete user documents in Firestore
+      // (This does NOT delete Firebase Auth accounts; only the Firestore user profile doc)
+      allow delete: if isAdmin();
+    }
+
+    // PRODUCTS (public read ok)
+    match /products/{id} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // PHARMACIES (public read ok)
+    match /pharmacies/{id} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // ORDERS
+    // Keep secure: users should only read their own orders; admins can read all
+    match /orders/{id} {
+      allow read: if signedIn() && (isAdmin() || resource.data.uid == request.auth.uid);
+
+      // IMPORTANT FIX:
+      // When creating an order, the uid in the new doc must match the signed-in user
+      allow create: if signedIn() && request.resource.data.uid == request.auth.uid;
+
+      allow update: if isAdmin();
+      allow delete: if false;
+    }
+
+    // RESERVATIONS (IF USED)
+    match /reservations/{id} {
+      // IMPORTANT FIX:
+      // Many implementations "upsert" by using setDoc(merge:true), which requires update permission too.
+      allow read, create, update, delete: if signedIn();
+    }
+  }
+}
