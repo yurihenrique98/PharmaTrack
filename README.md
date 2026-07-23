@@ -121,7 +121,6 @@ The reservation system temporarily reserves medicine stock while products remain
 
 ## Administrator Dashboard
 
-![Admin Dashboard](./images/admin-dashboard.png)
 ![Admin Dashboard](./images/admin-dashboard1.png)
 ![Admin Dashboard](./images/admin-dashboard2.png)
 
