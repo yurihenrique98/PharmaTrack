@@ -1,6 +1,6 @@
 # PharmaTrack – Community Pharmacy Ordering Platform
 
-![PharmaTrack Preview](PharmaApp.png)
+![PharmaTrack Preview](./images/PharmaApp.png)
 
 ## Project Overview
 
