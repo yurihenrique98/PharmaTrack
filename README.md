@@ -1,7 +1,5 @@
 # PharmaTrack – Community Pharmacy Ordering Platform
 
-![PharmaTrack Preview](./images/PharmaApp.png)
-
 ## Project Overview
 
 PharmaTrack is a cloud-native pharmacy ordering platform developed using React and Firebase. The application enables customers to browse nearby pharmacies, search for medicines, reserve products, manage shopping carts, and place orders through an intuitive interface. Administrators are provided with comprehensive tools to manage products, inventory, customer accounts, and order processing.
