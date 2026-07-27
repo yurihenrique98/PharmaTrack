@@ -1,25 +1,48 @@
-# PharmaTrack – Community Pharmacy Ordering Platform
+# 💊 PharmaTrack – Community Pharmacy Ordering Platform
 
-## Project Overview
+A cloud-native pharmacy ordering platform developed using **React, Next.js, and Firebase**, enabling customers to browse nearby pharmacies, reserve medicines, manage shopping carts, and place orders while providing administrators with powerful inventory and user management tools.
 
-PharmaTrack is a cloud-native pharmacy ordering platform developed using React and Firebase. The application enables customers to browse nearby pharmacies, search for medicines, reserve products, manage shopping carts, and place orders through an intuitive interface. Administrators are provided with comprehensive tools to manage products, inventory, customer accounts, and order processing.
-
-Built using a serverless architecture, PharmaTrack leverages Firebase Authentication and Firestore to provide secure user management, real-time data synchronisation, and scalable cloud storage while integrating Leaflet and OpenStreetMap for interactive pharmacy location services.
+Built using a serverless architecture, PharmaTrack combines Firebase Authentication, Cloud Firestore, and interactive mapping technologies to deliver a secure, scalable, and responsive healthcare ordering platform.
 
 ---
 
-# My Role
+# 📖 Project Overview
+
+PharmaTrack is a modern web application designed to simplify the process of ordering medicines from local pharmacies.
+
+Customers can browse nearby pharmacies, search available medicines, reserve products, manage their shopping cart, and place orders through an intuitive interface. Administrators are provided with comprehensive tools to manage products, inventory, customer accounts, and order processing.
+
+The project demonstrates modern cloud application development using React, Next.js, Firebase Authentication, Cloud Firestore, and Leaflet while following responsive design and secure authentication principles.
+
+---
+
+# ⭐ Project Highlights
+
+- Individual university project
+- Cloud-native architecture
+- React & Next.js frontend
+- Firebase Authentication
+- Cloud Firestore database
+- Interactive pharmacy map
+- Real-time stock synchronisation
+- Shopping cart & reservation system
+- Role-Based Access Control (RBAC)
+- Administrator dashboard
+- Responsive user interface
+
+---
+
+# 👨‍💻 My Role
 
 This was an individual university project where I independently designed, developed, tested, and documented the complete application, including frontend development, Firebase integration, authentication, database structure, and administrative functionality.
 
 ---
 
-# Core Features
+# ✨ Core Features
 
 - Cloud-native pharmacy ordering platform
 - Interactive pharmacy map using Leaflet
-- Real-time medicine availability
-- Pharmacy-specific product catalogue
+- Pharmacy-specific medicine catalogue
 - Shopping cart with stock reservation
 - Secure checkout workflow
 - Firebase Authentication
@@ -32,61 +55,23 @@ This was an individual university project where I independently designed, develo
 
 ---
 
-# Technologies & Tools
+# 🛠 Technologies & Tools
 
-## Frontend
-
-- React
-- Next.js
-- TypeScript
-- HTML5
-- CSS3
-
-## Backend & Cloud Services
-
-- Firebase Authentication
-- Firebase Firestore
-- Firebase Hosting
-
-## Database
-
-- Cloud Firestore (NoSQL)
-
-## APIs & Libraries
-
-- Leaflet
-- OpenStreetMap
-- Firebase SDK
-
-## Development Tools
-
-- Visual Studio Code
-- Git
-- GitHub
-- Postman
+| Category | Technologies |
+|-----------|--------------|
+| Frontend | React, Next.js, TypeScript, HTML5, CSS3 |
+| Cloud Services | Firebase Authentication, Firebase Firestore, Firebase Hosting |
+| Database | Cloud Firestore (NoSQL) |
+| Mapping | Leaflet, OpenStreetMap |
+| Development Tools | Visual Studio Code, Git, GitHub, Postman |
 
 ---
 
-# Key Features
+# 📸 Application Showcase
 
-- Secure user authentication
-- Role-based access control
-- Interactive pharmacy map
-- Pharmacy-specific stock filtering
-- Shopping cart and reservation system
-- Real-time stock updates
-- Inventory management
-- User management
-- Order management
-- Cloud database integration
-- Responsive design
-- Real-time Firestore synchronisation
+## 🏥 Customer Experience
 
----
-
-# Application Showcase
-
-## Home Page
+### Home Page
 
 ![Homepage](./images/homepage.png)
 
@@ -94,7 +79,7 @@ The homepage provides users with quick access to pharmacy locations, authenticat
 
 ---
 
-## Interactive Pharmacy Map
+### Interactive Pharmacy Map
 
 ![Pharmacy Map](./images/pharmacy-map.png)
 
@@ -102,7 +87,7 @@ Users can browse pharmacy locations using an interactive Leaflet map integrated 
 
 ---
 
-## Product Catalogue
+### Product Catalogue
 
 ![Products](./images/product-list.png)
 
@@ -110,19 +95,23 @@ Products are filtered according to the selected pharmacy, allowing users to brow
 
 ---
 
-## Shopping Cart & Checkout
+### Shopping Cart & Checkout
 
-![Shopping Cart](./images/cart1.png)
-![Shopping Cart](./images/cart2.png)
+<p align="center">
+<img src="./images/cart1.png" width="420">
+<img src="./images/cart2.png" width="420">
+</p>
 
-The reservation system temporarily reserves medicine stock while products remain in the user's shopping cart, reducing the possibility of conflicting purchases during checkout.
+The reservation system temporarily reserves medicine stock while products remain in the customer's shopping cart, reducing conflicting purchases during checkout.
 
 ---
 
-## Administrator Dashboard
+## 👨‍💼 Administrator Dashboard
 
-![Admin Dashboard](./images/admin-dashboard1.png)
-![Admin Dashboard](./images/admin-dashboard2.png)
+<p align="center">
+<img src="./images/admin-dashboard1.png" width="420">
+<img src="./images/admin-dashboard2.png" width="420">
+</p>
 
 Administrators can:
 
@@ -135,33 +124,62 @@ Administrators can:
 
 ---
 
-## User Profile Management
+## 👤 User Profile
 
-![User Profile](./images/profile-update1.png)
-![User Profile](./images/profile-update2.png)
-
+<p align="center">
+<img src="./images/profile-update1.png" width="420">
+<img src="./images/profile-update2.png" width="420">
+</p>
 
 User profile information is synchronised in real time using Firestore snapshot listeners, ensuring interface updates occur immediately without requiring page refreshes.
 
 ---
 
-# Cloud Architecture
+# ☁️ Cloud Architecture
 
-PharmaTrack follows a serverless cloud architecture powered entirely by Firebase services.
+PharmaTrack follows a fully serverless cloud architecture powered by Firebase services.
 
 The application combines:
 
-- React client application
+- React / Next.js frontend
 - Firebase Authentication
 - Cloud Firestore database
+- Real-time Firestore listeners
 - Cloud-hosted user data
-- Real-time database listeners
 
-This architecture removes the need for a traditional backend server while providing scalable infrastructure and real-time synchronisation.
+This architecture removes the need for a traditional backend server while providing scalability, security, and real-time synchronisation.
 
 ---
 
-# Firebase Integration
+# 🔄 Application Workflow
+
+```text
+Customer
+
+↓
+
+React / Next.js Frontend
+
+↓
+
+Firebase Authentication
+
+↓
+
+Cloud Firestore
+
+↓
+
+Real-Time Data Synchronisation
+
+↓
+
+Updated User Interface
+```
+
+---
+
+# 🔐 Firebase Integration
 
 Firebase services are used throughout the application to provide secure authentication and cloud-based data storage.
 
@@ -177,11 +195,9 @@ This flexible NoSQL structure allows the application to scale efficiently while 
 
 ---
 
-# Role-Based Access Control
+# 🛡 Role-Based Access Control (RBAC)
 
 Authentication is managed using Firebase Authentication while user roles are stored within Firestore.
-
-Two user roles are supported:
 
 ### Customer
 
@@ -197,48 +213,48 @@ Two user roles are supported:
 - Update stock
 - Process orders
 - Manage users
-- Disable suspicious accounts
+- Disable user accounts
 
 This separation ensures administrative functionality remains secure while customers can safely access public features.
 
 ---
 
-# Interactive Pharmacy Map
+# 🗺 Interactive Pharmacy Map
 
 Leaflet and OpenStreetMap provide an interactive mapping experience that allows users to locate nearby pharmacies.
 
-Rather than loading every medicine available across the system, each pharmacy marker retrieves only the products assigned to that location, improving:
+Rather than loading every medicine across the platform, each pharmacy marker retrieves only the products assigned to that location, improving:
 
 - Performance
 - Accuracy
-- Security
+- User experience
 
 ---
 
-# Shopping Cart & Reservation System
+# 🛒 Shopping Cart & Reservation System
 
-The shopping cart includes a reservation mechanism that temporarily holds product stock while users complete the checkout process.
+The shopping cart includes a reservation mechanism that temporarily holds medicine stock while users complete the checkout process.
 
-This helps prevent multiple customers from purchasing unavailable medicine simultaneously and demonstrates handling of real-time inventory management.
+This helps prevent multiple customers from purchasing unavailable medicines simultaneously while demonstrating real-time inventory management.
 
 ---
 
-# Real-Time Synchronisation
+# ⚡ Real-Time Synchronisation
 
-Firestore snapshot listeners allow the application to immediately update interface components whenever data changes.
+Firestore snapshot listeners allow the application to update interface components automatically whenever data changes.
 
 Real-time synchronisation is used for:
 
 - User profile updates
-- Order status
 - Product stock
+- Order status
 - Administrative changes
 
-This eliminates the need for manual page refreshes and provides a modern user experience.
+This removes the need for manual page refreshes while providing a modern user experience.
 
 ---
 
-# Challenges & Solutions
+# 🚧 Challenges & Solutions
 
 During development several technical challenges were encountered and resolved.
 
@@ -248,11 +264,11 @@ Configured Firestore security rules to separate public product access from prote
 
 ### Leaflet Rendering
 
-Resolved React rendering conflicts by properly managing Leaflet component lifecycle.
+Resolved React rendering conflicts by correctly managing the Leaflet component lifecycle.
 
 ### Administrator Roles
 
-Implemented real-time user listeners to ensure administrator permissions remain synchronised.
+Implemented real-time user listeners to ensure administrator permissions remained synchronised.
 
 ### Product Loading
 
@@ -260,7 +276,7 @@ Normalised pharmacy product identifiers to guarantee accurate stock information 
 
 ---
 
-# What I Learned
+# 📚 What I Learned
 
 Developing PharmaTrack significantly strengthened my understanding of modern cloud application development.
 
@@ -272,16 +288,16 @@ Key learning outcomes include:
 - Firebase Authentication
 - Cloud Firestore
 - NoSQL database design
-- Real-time database synchronisation
-- Role-Based Access Control
-- Leaflet mapping integration
+- Real-time synchronisation
+- Role-Based Access Control (RBAC)
+- Interactive mapping with Leaflet
 - Cloud application security
 - State management
-- Responsive user interface development
+- Responsive interface development
 
 ---
 
-# Future Improvements
+# 🚀 Future Improvements
 
 Future development could include:
 
@@ -296,7 +312,7 @@ Future development could include:
 
 ---
 
-# Test Credentials
+# 🔑 Test Credentials
 
 Use the following accounts to explore both user roles.
 
@@ -307,13 +323,12 @@ Use the following accounts to explore both user roles.
 
 ---
 
-# Installation & Setup
+# ⚙ Installation & Setup
 
 ## Clone the Repository
 
 ```bash
 git clone https://github.com/yurihenrique98/PharmaTrack.git
-
 cd PharmaTrack
 ```
 
@@ -329,7 +344,7 @@ npm install
 
 ## Configure Firebase
 
-Create a `.env.local` file and add your Firebase configuration:
+Create a `.env.local` file and add your Firebase configuration.
 
 ```env
 NEXT_PUBLIC_FIREBASE_API_KEY=
@@ -350,12 +365,27 @@ npm run dev
 
 The application will be available at:
 
-```
+```text
 http://localhost:3000
 ```
 
 ---
 
-# Conclusion
+# 🎯 Conclusion
 
-PharmaTrack demonstrates my ability to design and develop a modern cloud-native web application using React, Next.js, Firebase, and Firestore. The project combines secure authentication, role-based access control, real-time cloud data synchronisation, interactive mapping, inventory management, and responsive user interface design to deliver a scalable pharmacy ordering platform built using contemporary software engineering practices.
+PharmaTrack demonstrates my ability to design and develop a modern cloud-native web application using React, Next.js, Firebase, and Firestore. The project combines secure authentication, role-based access control, cloud-native architecture, real-time data synchronisation, interactive mapping, inventory management, and responsive interface design to deliver a scalable pharmacy ordering platform built using contemporary software engineering practices.
+
+---
+
+# 👨‍💻 Author
+
+**Yuri Henrique Gomes de Oliveira**
+
+Graduate Software Developer
+
+- GitHub: https://github.com/yurihenrique98
+- LinkedIn: https://www.linkedin.com/in/yuri-henrique-gomes-de-oliveira-07a4bb395
+
+---
+
+## ⭐ If you found this project interesting, feel free to star the repository!
